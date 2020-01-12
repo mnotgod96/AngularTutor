@@ -1,3 +1,24 @@
-<p>
-  server works!
-</p>
+<div class="headContainer">
+  <h1 style="font-family: KaiTi; color: black;">神厨小福贵 1.0</h1>
+</div>
+<div class="panel">
+  <div style="font-family: Microsoft YaHei; font-size: 120%;">今天想放入什么食材? <input type="text" [(ngModel)]="foodName"></div>
+  <div class="btnContainer">
+    <button class="btn btn-primary" (click)="addFood()">Add</button>
+    <button class="btn btn-primary" (click)="clearFood()">Clear</button>
+    <button class="btn btn-primary" (click)="cookFood()">Cook</button>
+  </div>
+</div>
+<div *ngIf="isAdding" class="informBoxBoarder"> 食材已成功放入！ </div>
+<div *ngIf="isClearing" class="informBoxBoarder"> 食材已清空！ </div>
+<div *ngIf="isCooking" class="informBoxBoarder"> {{ resultName }}做好了！ </div>
+<div *ngIf="noSuchFood" class="informBoxBoarder">这是一道黑暗料理，下次再试试吧</div>
+<br>
+<br>
+<h4>菜篮子</h4>
+<br>
+<div *ngFor="let food of foods">
+  <div style="margin-bottom: 2px;border-left: solid 2px; border-right: solid 2px; border-bottom: solid 2px; border-top: solid 2px; display: flex; justify-content: space-between">
+    <div><span style="color: cornflowerblue; margin-right: 5px">食品： </span> <span> {{ food }}</span></div>
+  </div>
+</div>

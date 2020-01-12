@@ -1,0 +1,19 @@
+.headContainer {
+  display: flex;
+  direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-image: url("http://igniteindy.org/wp-content/uploads/2018/01/food-background-light.jpg");
+  background-position: center center;
+}
+.panel {
+  display: flex;
+  direction: column;
+  justify-content: center;
+}
+.btnContainer {
+  display: flex;
+  direction: column;
+  justify-content: space-evenly;
+}
